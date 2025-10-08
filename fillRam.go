@@ -7,11 +7,10 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
-// 块大小50MB
-const chunkSize = 50 << 20
+// 块大小10MB
+const chunkSize = 10 << 20
 
 func main() {
 	var memoryChunks [][]byte
@@ -26,10 +25,10 @@ func main() {
 		memoryChunks = append(memoryChunks, chunk)
 		chunkCount++
 		mb = chunkCount * chunkSize >> 20
-		if mb%500 == 0 {
+		if mb%100 == 0 {
 			fmt.Printf("%.1f GB\n", float64(mb)/1000)
 		}
 		// 给系统反应一下
-		time.Sleep(1 * time.Millisecond)
+		// time.Sleep(1 * time.Millisecond)
 	}
 }
