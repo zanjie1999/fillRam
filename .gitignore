@@ -1,0 +1,7 @@
+build
+fillRam
+fillRam.exe
+go.sum
+.DS_Store
+config.yaml
+__debug_bin
